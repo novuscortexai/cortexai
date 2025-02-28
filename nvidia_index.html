@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="" href="assets/images/site image.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovusCortex.com | CortexAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
+    <script type="module" crossorigin src="assets/js/index-Bwp9cGKA.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/css/index-LyxvB_Hg.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img src="assets/images/Logo-BZK2SMrT.png" alt="NVIDIA AI IoT Logo">
+          </div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a href="../index.html">Home</a></li> <!-- Home link to root page -->
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </nav>
+          
+          <div class="header-cta">
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero" style="background-image: url('assets/images/pageBG-B_Lk-oTY.png'); background-size: cover; background-position: center;">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">Transform Your IoT with AI-Powered Edge Computing</h1>
+              <p class="hero-subtitle">Harness NVIDIA AI to process real-time IoT data, automate decision-making, and unlock new business insights—all from the edge.</p>
+              <a href="#demo" class="btn btn-primary btn-large" style="border-radius: 30px 0 30px 0;">Start Your AI IoT Journey</a>
+            </div>
+            <div class="hero-image">
+              <img src="assets/images/HeroImage-Bsrqfh_X.jpg" alt="AI IoT Visualization" style="border-radius: 100px 0 100px 0;">
+            </div>
+          </div>
+        </div>
+        <div class="hero-bg-gradient"></div>
+      </section>
+
+      <!-- Solutions Section -->
+      <section class="solutions" id="solutions" style="background-color: #123524;">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" style="color: white;">NVIDIA AI-Powered Smart Edge Solution</h2>
+            <p class="section-subtitle" style="color: white;">Provides an AI-driven IoT platform where users can connect their devices, process real-time data at the edge, and gain actionable insights.</p>
+          </div>
+          
+          <div class="how-it-works" >
+            <h3 style="color: white;">How It Works</h3>
+            <div class="steps-container">
+              <div class="step" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 60px 0px 60px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="step-icon">
+                  <i class="fas fa-plug"></i>
+                </div>
+                <h4 style="color: white;">Connect</h4>
+                <p style="color: white;">Users integrate IoT sensors with the platform.</p>
+              </div>
+              <div class="step" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 60px 0px 60px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="step-icon">
+                  <i class="fas fa-microchip"></i>
+                </div>
+                <h4 style="color: white;">Process</h4>
+                <p style="color: white;">Data is processed locally using NVIDIA-powered AI models.</p>
+              </div>
+              <div class="step" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 60px 0px 60px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="step-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <h4 style="color: white;">Analyze</h4>
+                <p style="color: white;">The system provides predictive analytics, anomaly detection, and automation.</p>
+              </div>
+              <div class="step" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 60px 0px 60px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="step-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h4 style="color: white;">Visualize</h4>
+                <p style="color: white;">Users receive real-time dashboards and reports.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- IoT Demo Section -->
+          <div class="iot-demo" id="demo">
+            <h3 style="color: white;">Live Demo: AI-Powered Smart Edge IoT</h3>
+            <div class="iot-demo-container">
+              <div class="iot-demo-card">
+                <h2>Live Temperature</h2>
+                <p id="temperature">Loading...</p>
+              </div>
+
+              <div class="iot-demo-image">
+                <h2>AI-Processed Image</h2>
+                <img id="ai-image" src="https://placehold.co/400x300/2a2a2a/FFFFFF?text=AI+Processed+Image" alt="Processed AI Output">
+                <button onclick="fetchImage()" class="btn btn-primary" style="border-radius: 15px 0 15px 0;">Refresh Image</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="industries">
+            <h3 style="color: white;">Industries Served</h3>
+            <div class="industry-cards">
+              <div class="industry-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 40px 0px 40px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="industry-icon">
+                  <i class="fas fa-city"></i>
+                </div>
+                <h4 style="color: white;">Smart Cities</h4>
+                <p style="color: white;">Traffic monitoring, security, energy management</p>
+              </div>
+              <div class="industry-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 40px 0px 40px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="industry-icon">
+                  <i class="fas fa-heartbeat"></i>
+                </div>
+                <h4 style="color: white;">Healthcare</h4>
+                <p style="color: white;">Patient monitoring, smart wearables</p>
+              </div>
+              <div class="industry-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 40px 0px 40px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="industry-icon">
+                  <i class="fas fa-industry"></i>
+                </div>
+                <h4 style="color: white;">Industrial Automation</h4>
+                <p style="color: white;">Predictive maintenance, robotics</p>
+              </div>
+              <div class="industry-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 40px 0px 40px 0px; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="industry-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h4 style="color: white;">Retail & Logistics</h4>
+                <p style="color: white;">AI-powered inventory tracking, smart warehouses</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="benefits" id="benefits" style="background-image: url('assets/images/pageBG-B_Lk-oTY.png'); background-size: cover; background-position: center;">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Benefits of Using NVIDIA AI-Powered Smart Edge</h2>
+            <p class="section-subtitle">Our solution offers significant advantages over traditional IoT platforms</p>
+          </div>
+          
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h4>Real-Time Processing</h4>
+              <p>No latency issues like cloud-based solutions.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h4>Reduced Costs</h4>
+              <p>Lower cloud bandwidth and storage costs.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4>Improved Security</h4>
+              <p>AI processing happens on-site, reducing data exposure.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </div>
+              <h4>Scalable & Customizable</h4>
+              <p>Works with various IoT sensors and devices.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h4>Energy Efficient</h4>
+              <p>Optimized for low power consumption.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials" id="testimonials" style="background-color: #123524;">
+        <div class="container">
+          <div class="section-header" >
+            <h2 class="section-title" style="color: white;">Testimonials & Success Stories</h2>
+            <p class="section-subtitle" style="color: white;">See how our clients are transforming their businesses with NVIDIA AI-Powered Smart Edge</p>
+          </div>
+          
+          <div class="testimonial-slider" >
+            <div class="testimonial-slide active">
+              <div class="testimonial-content" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="testimonial-text" >
+                  <p style="color: white;">"Our traffic management system improved efficiency by 40% with NVIDIA's AI edge computing. Real-time analytics helped us reduce congestion and improve safety."</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="assets/4-DNWhFWdf.png" alt="Michael T.">
+                  </div>
+                  <div class="author-info">
+                    <h4 style="color: white;">Michael T.</h4>
+                    <p style="color: white;">Smart City Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-content" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="testimonial-text">
+                  <p style="color: white;">"Using AI-powered IoT monitoring, we've significantly improved patient care, detecting anomalies faster than ever."</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="assets/3-CyoGyV3W.png" alt="Dr. Sarah L.">
+                  </div>
+                  <div class="author-info">
+                    <h4 style="color: white;">Dr. Sarah L.</h4>
+                    <p style="color: white;">Healthcare Tech CEO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-content" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="testimonial-text">
+                  <p style="color: white;">"Predictive maintenance powered by NVIDIA AI saved us millions in downtime by detecting equipment failures before they happened."</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="assets/1-tyjNPY9c.png" alt="Rajesh P.">
+                  </div>
+                  <div class="author-info">
+                    <h4 style="color: white;">Rajesh P.</h4>
+                    <p style="color: white;">Industrial Automation Lead</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-content" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="testimonial-text">
+                  <p style="color: white;">"AI-driven inventory tracking reduced stock shortages and improved demand forecasting by 30%."</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="assets/5-Cl8W8PZn.png" alt="Emily W.">
+                  </div>
+                  <div class="author-info">
+                    <h4 style="color: white;">Emily W.</h4>
+                    <p style="color: white;">Retail Operations Manager</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-content" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <div class="testimonial-text">
+                  <p style="color: white;">"Our smart warehouse system with edge AI cut processing times in half while improving overall accuracy."</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="assets/2-c3dbYwTP.png" alt="Carlos G.">
+                  </div>
+                  <div class="author-info">
+                    <h4 style="color: white;">Carlos G.</h4>
+                    <p style="color: white;">Logistics Coordinator</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-dots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+            </div>
+            <button class="next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq" id="faq" style="background-color: #123524;">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" style="color: white;">Frequently Asked Questions</h2>
+            <p class="section-subtitle" style="color: white;">Get answers to common questions about our NVIDIA AI-Powered Smart Edge Platform</p>
+          </div>
+          
+          <div class="faq-container">
+            <div class="faq-item" >
+              <div class="faq-question" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <h4 style="color: white;">What is the NVIDIA AI-Powered Smart Edge Platform?</h4>
+                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p style="color: white;">It's an AI-driven IoT solution that processes real-time data at the edge using NVIDIA's AI technology, providing instant insights and automation.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <h4 style="color: white;">How can I integrate my IoT devices with this solution?</h4>
+                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p style="color: white;">Our platform supports a wide range of IoT devices and provides APIs, SDKs, and plug-and-play integrations for easy setup.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <h4 style="color: white;">Is this solution cloud-dependent?</h4>
+                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p style="color: white;">No, it processes data on-site with NVIDIA's AI edge technology, reducing latency and enhancing security. Cloud storage is optional for historical data.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <h4 style="color: white;">What industries benefit the most from this platform?</h4>
+                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p style="color: white;">Smart cities, healthcare, industrial automation, retail, logistics, and more. Any industry needing real-time AI insights from IoT devices can benefit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px;">
+                <h4 style="color: white;">How do I get started?</h4>
+                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p style="color: white;">Simply sign up on our website, select your industry, and integrate your IoT devices with our platform for instant AI-driven insights.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="assets/Logo-BZK2SMrT.png" alt="NVIDIA AI IoT Logo">
+            <p class="elevator-pitch">We are leading the way in IoT innovation driven by AI. We help you in streamlining processes, cutting expenses, and promoting long-term success by using smart technology. Join us , let's build a wiser, more effective world by shaping the direction of intelligent systems in the future.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>INNOVATION CENTER</h4>
+              <ul>
+                <li><a href="#">333 O'Farrell St,<br>
+                  San Francisco CA 94102,<br>
+                  United States</a></li>
+                <li><a href="#">+1 415-771-1400</a></li>
+                <li><a href="#">help@novuscortex.com</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-column">
+              <h4>QUICK LINKS</h4>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/novus-cortex/" aria-label="LinkedIn"><i class="fab fa-linkedin" targer="_blank"></i></a>
+            <a href="https://x.com/NovusCortex22" aria-label="Twitter"><i class="fab fa-twitter" targer="_blank"></i></a>
+            <a href="https://www.pinterest.com/NovusCortex/" aria-label="Pinterest"><i class="fab fa-pinterest" targer="_blank"></i></a>
+            <a href="https://www.youtube.com/@NovusCortex" aria-label="YouTube"><i class="fab fa-youtube" targer="_blank"></i></a>
+            <a href="https://www.f6s.com/" aria-label="F6S" targer="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG1SURBVHgB7ZjvjYJAEMUHct/VDizBDtQKtAStQEuwBK1ArcBYgXYAHQAVQAd7vD2HLCvDv5gDE36JWdgdmLfwht1IRKQ2m43yPE91AfIiP3QQDvqAFtTVE7GBDgcH1BNc6hGDGIkf+hBRFOl2NBrReDymVqgPMZ1O9bficrmotgyekfheMWzSOiRJ0ii+lpgwDGm5XNJkMqHUpOQ4jj5HfxG+7+fi0W63WzE+R5m7b7ebSsv0b0Ut+JmVw9Uk/TBetQ6KYoIgyBKgPR6P6vF4qPP5nPVDKOJsMRyPyex2u2xC6I/jWDUWs9/vsxtwQlMoJ0CcKaYqHiIbi1ksFvriuvsdFiMl4w1U2f3cMuMCmLAJ0lLA90GVSYhiZrOZbp/PZ+H4/X6n6/X6No5qKoLjSicnPTIYlV6GPBwOuTFUEVkVZRoYRjfB9Txm+8mktLTZN/QyJt633cfYpY04O57N3koMynC9Xhd+N5DEnGXVd6ZKCKi1B8b7hkdgPhh0tVpRKuYtBsBr8A3H43w+n2ceLGPYkEsMYiQGMRKDGAlXWtj+G+hwT6cT9QHWoRe0VJnqAvOfq1/+mq6AAX3Z2QAAAABJRU5ErkJggg==" alt="F6S logo" class="cb">
+            </a>
+            <a href="https://www.f6s.com/" aria-label="F6S" targer="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAP2SURBVHgB1Zm9SyNBGMafxOAXfkTtFEwEQbA5r7A2V1jYeCI2WlkoKAjegYWFeF5nJyiioMU1YiXedVa6jQha6P0FFxG1UFHxW9S5ecYkt0l2s5t1TS4/eN1x583ss/P1zux48AaEEH55CUUsIK1Jmj9i5EJaOHL9LU2jeTyeC2QSKTQkbUPauXDGqrQOvDd8iLQ/wj3+SOuF28hCg+K1Rt+LXT4DbiAL+iKcN3068Blf8BZkAd9E5vkGJ2RJrDPRWRYbxZ5o8dpn/xeS+rQnQWxQXnbxb+LHw8MDHh8fTV+wpKQEMhDg6ekJd3d3Sfn5+fkoKCiI/c+yWKZZOQkwwHyU98Nmgim2SX9vZGQEa2trMGNzcxMHBwfo7+/H1dVVUr7X68X4+Di6urqwsLCA2dlZ9XKJVFdXq/xAIJCYxcj4KVaeTmxvoli7LC4uGoolLy8vmJmZUenl5WVDseTo6Airq6tGWYyqHUmCJc6mE4mZiCj39/fq+vz8nNLv9vbWLGsqmlCCI28QhAVs1q2trTgrLy+P8xkeHlb3p6enU5a1sbGh/Nra2mADRtoQE77IjV47v+LgKS0tteVj5VdWVqZ8OShtwh6g+cTrEvEzXKaiogINDQ0qXVhYaOpXV1eH5uZmla6trU1RIpqolTUcwjtQX1+PlZUVS7++vj5lNlBrb/bhEHIHJfgDcocgu4TfrjenndPTU5XmoNJHMCMfUlxcrCyRk5OTuL5dWVmpgowFHzyyI5+nEm0W6aamptDa2qrSQ0ND0DTN8PcUMTo6ip6eHrS0tODs7MzQjxFuaWkJfn/K+rvwIo0adgIjHSMhycvLM/Xb3983i3R6/JZt4AY3Nzfq2t3djaKiIlO/4+NjWME+zBWRrVpub29XzU/Mmm5gYACdnZ3Y3t7G2NhYXB4XSMzTr9YmJyexvr4Om1xQ8KVdwRxoXFWlghGMPjU1NYb5VVVVSWWmQZhdYg+5wyVrOIwMwRknOkvMz88bTosW7FGwJm0YGWBnZ8d0WrOJxi6h4XXg5QKaN/JhLhf68S9qjc7D3+ES3Cpxu2O2ZYpyeHio/K6vr2GTH/yjFvBSuSZDdBg2dh1WzM3NKbOCc3oahKXGn0zoI91XOCTVAp1wYUNShWaSuN3SEesBMcGRN9ASPX0+n5p+aGYPZMhlsIj66Y0RcXBwUPkx0vF/I7/GxkZ0dBh+Mt6T2n7EdOpzjD6kZJmkDylxi59IhmsD0AW+68WaImt6QmSfCaSDyK7oCTghS6In8BZELh0Z6ETzU9GueD8YuIJwG1lor3D/2Ctj53U/hTPY9KzREBzgwRsQ8Ue30WPbAOKPbrkF42owDBeObv8CWMSWLKQG5bkAAAAASUVORK5CYII=" alt="F6S logo" class="f6s-icon">
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Novus Cortex. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+  </body>
+</html>
